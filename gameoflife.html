@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Best Homepage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class='container'>
+            <div class="btn-group pad">
+                <button type="button" class="btn btn-info" onclick="run();">Go</button>
+                <button type="button" class="btn btn-info" onclick="stop();">Pause</button>
+                <button type="button" class="btn btn-info" onclick="stop(); generateCells(0.2);">Random generate</button>
+                <button type="button" class="btn btn-info" onclick="stop(); generateCells(0); insertEntity(document.getElementById('entitysel').value);">Entity generate</button>
+                <button type="button" class="btn btn-info" onclick="stop(); generateCells(0);">Clear</button>
+                <span id='statusicon' style="font-size:2.0em; color:#CC2828; text-shadow:1px 1px 2px rgba(0, 0, 0, .5)" class="glyphicon glyphicon-pause"></span>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                <label for="entitysel">Entities:</label>
+                <select class="form-control" id="entitysel">
+                    <option value=''></option>
+                    <optgroup label='Spaceships'>
+                        <option value='glider'>Glider (c/4 diagonal)</option>
+                        <option value='lwss'>Lightweight Spaceship (c/2 orthogonal)</option>
+                        <option value='mwss'>Middleweight Spaceship (c/2 orthogonal)</option>
+                        <option value='hwss'>Heavyweight Spaceship (c/2 orthogonal)</option>
+                        <option value='loafer'>Loafer (c/7 orthogonal)</option>
+                        <option value='copperhead'>Copperhead (c/10 orthogonal)</option>          
+                    </optgroup>
+                    <optgroup label='Oscillators'>
+                        <option value='koksgalaxy'>Kok's Galaxy (8)</option>
+                        <option value='figureeight'>Figure Eight (8)</option>
+                        <option value='tumbler'>Tumbler (14)</option>
+                        <option value='queenbeeshuttle'>Queen Bee Shuttle (30)</option>
+                    </optgroup>
+                    <optgroup label='Guns'>
+                        <option value='gosperglidergun'>Gosper Glider Gun (with eater)</option>
+                    </optgroup>
+                </select>
+                </div>
+                <div class="col-md-6">
+                <label for="rulesel">Rules:</label>
+                <select class="form-control" id="rulessel" onchange="changeRules(this.value);";>
+                    <option value='conway'>Conway's Game of Life</option>
+                    <option value='dayandnight'>Day &amp; Night</option>
+                    <option value='highlife'>HighLife</option>
+                    <option value='lifewithoutdeath'>Life Without Death</option>
+                    <option value='livefreeordie'>Live Free or Die</option>
+                    <option value='maze'>Maze</option>
+                    <option value='seeds'>Seeds</option>
+                </select>   
+                </div>
+            </div>
+            <div class = "pad">
+                <canvas id="lifecanvas" onload="generateCells(0);" onclick="toggle(event)" width="600" height="600" style="border:1px solid #000000;"></canvas>
+            </div>
+            <a href="index.html" class="btn btn-primary margin" role="button"><span class="glyphicon glyphicon-home"></span> Back</a>
+        </div>
+        <script src="life.js"></script>   
+    </body>
+</html>

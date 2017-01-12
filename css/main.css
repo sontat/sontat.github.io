@@ -1,0 +1,26 @@
+body
+{
+    font-family:"Open sans", Helvetica, Arial;
+    line-height:1.5;
+    background-color: #E2CCCC;
+}
+
+.seriftitle {
+    font-family: 'Trocchi', serif;
+}
+
+.margin {
+    margin-bottom: 10px;
+}
+
+.pad {
+    padding-top: 10px;
+}
+
+.container {
+    margin-top: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, .5);
+    border: 2px solid black;
+    border-radius: 10px;
+}

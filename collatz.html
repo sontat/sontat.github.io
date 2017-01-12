@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Best Homepage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+        var lastEntry = 0;
+        
+        function collatz (num) {
+            lastEntry = num;
+            var nums = [];
+            var maxVal = 1;
+            var len = 1;
+            while (num != 1) {
+                maxVal = Math.max(maxVal, num); 
+                nums.push(num);
+                if (num % 2 == 0) {
+                    num = num/2;
+                } else {
+                    num = 3*num + 1;
+                }
+                len++;
+            }
+            nums.push(1);
+            
+            $("#list").html(nums.join(", "));
+            $("#length").html(len);
+            $("#maxval").html(maxVal);
+        }
+        
+        function hideCollapse() {
+            var num = $('#number').val();
+            if (num <= 0 || num % 1 != 0 || num == lastEntry) return;
+            $('#demo').collapse("hide");
+            setTimeout(showCollapse, (lastEntry == 0) ? 0 : 500);
+            
+        }
+        
+        function showCollapse() {
+            collatz($('#number').val());
+            $('#demo').collapse("show");
+        }
+        </script>
+        
+    </head>
+    <body>
+        <div class='container'>
+            <h2>The Collatz Conjecture</h2>
+            <p>Take any positive integer. If <var>n</var> is even, divide it by 2 to get <var>n / 2</var>. If <var>n</var> is odd, multiply it by 3 and add 1 to obtain <var>3n + 1</var>. Repeat this process indefinitely. The conjecture is that no matter what number you start with, you will eventually reach 1.</p>
+            <form>
+                <div class='row margin'>
+                    <div class="col-sm-2 text-right"><strong>Number:</strong></div>
+                    <div class="input-group col-sm-9">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" onclick="hideCollapse();">
+                                <i class="glyphicon glyphicon-repeat"></i>
+                            </button>
+                        </div>
+                        <input type="text" class="form-control" id="number">
+                    </div>
+                    <div class ='col-sm-1'></div>
+                </div>
+            </form>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div id="demo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class='row margin' >
+                                <div class = 'col-sm-2 text-right'><strong>Sequence:</strong></div><samp><div class='col-sm-9' id="list"></div></samp>
+                                <div class ='col-sm-1'></div>
+                            </div>
+                            <div class='row margin'>
+                                <div class = 'col-sm-2 text-right'><strong>Length:</strong></div><samp><div class = 'col-sm-9' id="length"></div></samp>
+                                <div class ='col-sm-1'></div>
+                            </div>
+                            <div class='row margin'>
+                                <div class = 'col-sm-2 text-right'><strong>Maximum:</strong></div><samp><div class = 'col-sm-9' id="maxval"></div></samp>
+                                <div class ='col-sm-1'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="btn btn-primary margin" role="button"><span class="glyphicon glyphicon-home"></span> Back</a>
+        </div>
+    </body>
+</html>

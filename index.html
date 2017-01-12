@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Best Homepage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trocchi">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+        </script>
+    </head>
+    <body>
+        <div class='container'>
+            <h1 class="seriftitle text-center" style="margin-bottom:20px;">Tyler Sontag's RPI Homepage</h1>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-education"></span>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        About
+                        </a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>I am a student at Rensselaer Polytechnic Institute pursuing a BS in computer science.</p>
+                            <div class="row" style="margin-bottom:20px;">
+                            <div class = 'col-sm-2'><strong>CS/Math topics I'm interested in:</strong></div>
+                            <div class = 'col-sm-10'>Web development, database management, functional programming, algorithm design, game design, graph theory, number theory, combinatorics.</div>
+                            </div>
+                            <div class="row" style="margin-bottom:20px;">
+                            <div class = 'col-sm-2'><strong>Languages I know:</strong></div>
+                            <div class = 'col-sm-10'>C, C++, CSS, Java, JavaScript, HTML, PHP, Python, Scheme, SQL.</div>
+                            </div>
+                            <a href="courses.html" class="btn btn-info" role="button">Courses I've Taken</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-paperclip"></span>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        Projects
+                        </a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="https://adoptapedia.com/" target="_blank">Adoptapedia</a></li>
+                            <li class="list-group-item"><a href="http://jamesa7171.net/" target="_blank">Chip's Challenge High Scores</a></li>
+                            <li class="list-group-item"><a href="https://github.com/sontat" target="_blank">My GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                        <span class="glyphicon glyphicon-knight"></span>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                        Games
+                        </a>
+                        </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="panel-group" id="accordion-games">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-games" href="#collapse1g">
+                                        Game Maker
+                                        </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1g" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                        <p>I spent a lot of my free time from age 12 to age 18 designing games in Game Maker. Most of them are not avaiable online anymore, but here's a game a made for a Game Jam at RPI in September 2013. Game Jams are competitions in which you have 24 hours to design a game based on a theme. I designed "Boxsmith" on my own, and it won the "Most Polished Game" category as judged by representatives from Vicarious Visions.</p>
+                                        <a href="boxsmith.zip" class="btn btn-primary margin" role="button">Download Boxsmith</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <h4 class="panel-title">
+                    <span class="glyphicon glyphicon-music"></span>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                    Music
+                    </a>
+                    </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="https://tylersontag.bandcamp.com/album/are-spirits-delicious" target="_blank">Are Spirits Delicious?</a> (2015)</li>
+                            <li class="list-group-item"><a href="https://tylersontag.bandcamp.com/album/psychosomatic-responses-to-the-changing-chords" target="_blank">Psychosomatic Responses to the Changing Chords</a> (2014)</li>
+                            <li class="list-group-item"><a href="https://tylersontag.bandcamp.com/album/deleting-life-mp3" target="_blank">Deleting Life.mp3</a> (2013)</li>
+                            <li class="list-group-item"><a href="https://tylersontag.bandcamp.com/album/communism" target="_blank">Communism</a> (2013)</li>
+                            <li class="list-group-item"><a href="#" data-toggle="popover" data-content="This was my first album. It is bad, therefore is no longer on the Web.">This Isn't Rap</a> (2013)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <h4 class="panel-title">
+                    <span class="glyphicon glyphicon-gift"></span>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                    Misc
+                    </a>
+                    </h4>
+                    </div>
+                    <div id="collapse5" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="collatz.html">The Collatz Conjecture</a></li>
+                            <li class="list-group-item"><a href="gameoflife.html">Conway's Game of Life</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
