@@ -3,6 +3,11 @@ body
     font-family:"Open sans", Helvetica, Arial;
     line-height:1.5;
     background-color: #E2CCCC;
+		background-image: url("check.png");
+		animation-name: bg;
+		animation-duration: 1s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
 }
 
 .seriftitle {
@@ -18,9 +23,15 @@ body
 }
 
 .container {
-    margin-top: 10px;
+    margin-top: 1%;
+		margin-bottom:1%;
     background-color: #FFFFFF;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, .5);
-    border: 2px solid black;
+    border: 2px solid #444444;
     border-radius: 10px;
+}
+
+@keyframes bg {
+    from {background-position: 0px 0px;}
+    to {background-position: 16px 16px;}
 }

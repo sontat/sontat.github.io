@@ -1,10 +1,13 @@
 var rules = {
 conway: {b: [3], s: [2, 3]},
+twobytwo: {b: [3, 6], s: [1, 2, 5]},
 dayandnight: {b: [3, 6, 7, 8], s: [3, 4, 6, 7, 8]},
+flock: {b: [3], s: [1, 2]},
 highlife: {b: [3, 6], s: [2, 3]},
 lifewithoutdeath: {b: [3], s: [0, 1, 2, 3, 4, 5, 6, 7, 8]},
 livefreeordie: {b: [2], s: [0]},
 maze: {b: [3], s: [1, 2, 3, 4, 5]},
+mazectric: {b: [3], s: [1, 2, 3, 4]},
 seeds: {b: [2], s: []}
 };
 
@@ -112,13 +115,13 @@ function iterate() {
 function run() {
     clearInterval(intervalID);
     intervalID = setInterval(iterate, 100);
-    document.getElementById("statusicon").className = "glyphicon glyphicon-play";
+    document.getElementById("statusicon").innerHTML = "Playing";
     document.getElementById("statusicon").style.color = "#5FCC28";
 }
 
 function stop() {
     clearInterval(intervalID);
-    document.getElementById("statusicon").className = "glyphicon glyphicon-pause";
+    document.getElementById("statusicon").innerHTML = "Paused";
     document.getElementById("statusicon").style.color = "#CC2828";
 }
 

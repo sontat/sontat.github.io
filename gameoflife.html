@@ -11,13 +11,14 @@
     </head>
     <body>
         <div class='container'>
-            <div class="btn-group pad">
+            <h2>Game of Life</h2>
+            <div class=""btn-group">
                 <button type="button" class="btn btn-info" onclick="run();">Go</button>
                 <button type="button" class="btn btn-info" onclick="stop();">Pause</button>
                 <button type="button" class="btn btn-info" onclick="stop(); generateCells(0.2);">Random generate</button>
                 <button type="button" class="btn btn-info" onclick="stop(); generateCells(0); insertEntity(document.getElementById('entitysel').value);">Entity generate</button>
                 <button type="button" class="btn btn-info" onclick="stop(); generateCells(0);">Clear</button>
-                <span id='statusicon' style="font-size:2.0em; color:#CC2828; text-shadow:1px 1px 2px rgba(0, 0, 0, .5)" class="glyphicon glyphicon-pause"></span>
+                <span id='statusicon' style="margin-left:10px; font-weight:bold; color:#CC2828;"><strong>Paused</strong></span>
             </div>
             <div class="row">
                 <div class="col-md-6">
@@ -46,13 +47,16 @@
                 <div class="col-md-6">
                 <label for="rulesel">Rules:</label>
                 <select class="form-control" id="rulessel" onchange="changeRules(this.value);";>
-                    <option value='conway'>Conway's Game of Life</option>
-                    <option value='dayandnight'>Day &amp; Night</option>
-                    <option value='highlife'>HighLife</option>
-                    <option value='lifewithoutdeath'>Life Without Death</option>
-                    <option value='livefreeordie'>Live Free or Die</option>
-                    <option value='maze'>Maze</option>
-                    <option value='seeds'>Seeds</option>
+                    <option value='conway'>Conway's Game of Life (B3/S23)</option>
+                    <option value='twobytwo'>2x2 (B36/S125)</option>
+                    <option value='dayandnight'>Day &amp; Night (B3678/S34678)</option>
+                    <option value='flock'>Flock (B3/S12)</option>
+                    <option value='highlife'>HighLife (B36/S23)</option>
+                    <option value='lifewithoutdeath'>Life Without Death (B3/S012345678)</option>
+                    <option value='livefreeordie'>Live Free or Die (B2/S0)</option>
+                    <option value='maze'>Maze (B3/S12345)</option>
+                    <option value='mazectric'>Mazetric (B3/S1234)</option>
+                    <option value='seeds'>Seeds (B2/S)</option>
                 </select>   
                 </div>
             </div>
